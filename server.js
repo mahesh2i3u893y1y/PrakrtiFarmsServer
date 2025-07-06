@@ -4,7 +4,7 @@ const app = express();
 const cors = require("cors")
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: "https://prakrtifarms.vercel.app", credentials: true }));
 require('./src/cronJobs/generateDailyOrders');
 
 const {connectDb} = require("./src/config/database")
